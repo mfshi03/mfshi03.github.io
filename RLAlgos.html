@@ -1,0 +1,49 @@
+<html>
+    <head><link rel="stylesheet" type="text/css" href="index.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Research</title>
+    <style type="text/css">
+    img {
+      width: 250px;
+      padding-right: 10px;
+    }
+    li.research_item {
+      width: 100%;
+    }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<nav class="menu">
+  <ul class="menu__list">
+    <li class="menu__group"><a href="index.html" class="menu__link">Michael Shi</a></li>
+    <li class="menu__group"><a href="research.html" class="menu__link select__link">Research</a></li>
+  </ul>
+</nav>
+
+<body>
+    <h2>Policy Evaluation</h2>
+    Given a Markov Decision Process(MDP), Policy evaluation allows us to calculate rewards for actions and states in the MDP. This is important for reinforcement learning.
+    $$ \begin{array}{rcll}
+    V_{\pi}(s) & = & \begin{cases}
+    0,  & \text{if state s is an end state} \\
+    Q_{\pi}(s,a), & \text{if state s is not an end state}\end{cases} \\
+    \\
+    \text{This recurrence describes the value of a policy } \pi \text{ where, }\\
+    \\
+    Q_{\pi}(s,a) & = & \sum_{s'} T(s,a,s')[R(s,a,s') + \gamma*V_{\pi}(s')] \\
+    \\
+    \text{given that } T(s,a,s') \text{ is the probability of getting to state s' from state s}\\
+    R(s,a,s') \text{ is the reward as gained from moving to state s' from state s}\\
+    \gamma \text{ is the discount factor given by the uncertainty of moving to future states}
+    \end{array} $$
+    
+    We can use these functions to describe an algorithm for policy evaluation below.
+    
+    <img src = "img/Policy Evaluation.PNG" style="width:800px;height:300px;"/>
+    
+    
+</body>>

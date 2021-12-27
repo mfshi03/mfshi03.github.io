@@ -42,7 +42,6 @@ nav {
 
 a {
   text-decoration: none;
-  color: rgb(7, 44, 146) !important;
 }
 
 li {
@@ -90,6 +89,7 @@ li {
 }
 
 .menu__link {
+  color: rgb(7, 44, 146);
   display: block;
 }
 
@@ -110,7 +110,7 @@ li {
   padding: 0.8rem 0rem;
 
   font-weight: 700;
-  color: rgb(0, 0, 0);
+  color: rgb(7, 44, 146);
   text-decoration: none;
   /* text-transform: uppercase; */
 }
@@ -160,9 +160,15 @@ li {
   width: 100%;
   transition-duration: 0.2s;
 }
+/* Research blog posts*/
+.post__date {
+  font-size: 15px;
+}
 
-/*
-  =====
-  DEMO
-  =====
-  */
+.post__link {
+  color: black;
+}
+.post__link:hover {
+  width: 100% !important;
+  color: blue;
+}
